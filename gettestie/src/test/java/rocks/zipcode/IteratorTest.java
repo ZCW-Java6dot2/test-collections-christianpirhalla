@@ -26,6 +26,7 @@ public class IteratorTest {
         Integer actual2 = ite.next();
         Assert.assertEquals(expected2, actual2);
 
+        ite.next();
         ite.remove(); // should remove 3
 
         ArrayList<String> expectedEntries = new ArrayList<>(Arrays.asList(new String[]{"4", "5"}));

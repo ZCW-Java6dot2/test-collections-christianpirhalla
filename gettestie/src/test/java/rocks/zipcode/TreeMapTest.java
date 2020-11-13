@@ -50,8 +50,10 @@ public class TreeMapTest {
 
         tree.put(26, 'Z');
 
-        Assert.assertNull(tree.floorKey(26));
-        Assert.assertNull(tree.higherKey(26));
+        Assert.assertNull(tree.lowerKey(26));
+        Assert.assertNull(tree.higherKey(26)); //lower/higher are NOT inclusive
+        Assert.assertNotNull(tree.floorKey(26));
+        Assert.assertNotNull(tree.ceilingKey(26));//floor/ceiling ARE inclusive
         Assert.assertNull(tree.remove(1));
         Assert.assertFalse(tree.isEmpty());
 
