@@ -15,6 +15,8 @@ public class TreeSetTest {
 
         Assert.assertFalse(ts.isEmpty());
 
+        Assert.assertFalse(ts.add(27));
+
         Integer expectedSize = 5;
         Integer actualSize = ts.size();
         Assert.assertEquals(expectedSize, actualSize);
